@@ -31,7 +31,7 @@ A secure, backend-only digital wallet system with user authentication, cash oper
 - Flags withdrawals > ₹5000
 - Daily fraud scan via `node-cron`
 
-### 📊 Admin APIs
+### Admin APIs
 - View fraud flags
 - View top wallet users
 - Total system balance summary
