@@ -9,7 +9,6 @@ const app = express();
 const PORT = 5000;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/walletdb';
 
-
 app.use(cors());
 app.use(helmet());
 app.use(express.json());
@@ -29,6 +28,8 @@ const adminRoutes = require('./routes/admin');
 app.use('/api/admin', adminRoutes);
 const scheduleFraudScan = require('./cron/fraudScanner');
 scheduleFraudScan();
+const { swaggerUi, specs } = require('./swagger');
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
 
 app.get('/', (req, res) => {
