@@ -37,7 +37,16 @@ A secure, backend-only digital wallet system with user authentication, cash oper
 - Total system balance summary
 
 ---
+### How to Use Protected Routes in Swagger
+1. Call `/api/auth/login` and copy the returned token
+2. Click the 🔓 Authorize button (top right)
+3. Paste your token and hit Authorize
+4. Now you can test all `/wallet` and `/admin` routes!
 
+## Swagger Document Link
+-http://localhost:5000/api-docs
+
+---
 ##  Run with Docker 
 
 ```bash
